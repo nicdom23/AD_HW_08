@@ -1,7 +1,19 @@
 #ifndef GRAPH
 #define GRAPH
+#include"node.h"
 
-void Init_SSSP(graph G);
-void Relax(pqueue Q, node u, node v, int w);
-void Dijkstra(graph G, node s)
-#endif // GRAPH
+//datatypes for the graphs
+typedef struct{
+
+node* V;
+int** AdjMatrix;
+
+size_t size_N; //number of nodes
+
+
+}graph;
+
+//build the graph
+graph* BuildGraph(node* N,int size_N, int** AdjMatrix)
+
+#endif //GRAPH

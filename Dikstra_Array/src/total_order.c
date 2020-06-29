@@ -1,15 +1,8 @@
-int leq_float(const void *a, const void *b)
+#include "total_order.h"
+#include "node.h"
+
+int leq_dist(const void *a, const void *b)
 {
-  return *((float*)a)<=*((float*)b);
+  return (*((node*)a)).d<=(*((node*)b)).d;
 }
 
-
-int leq_int(const void *a, const void *b)
-{
-  return *((int*)a)<=*((int*)b);
-}
-
-int geq_int(const void *a, const void *b)
-{
-  return *((int*)a)>=*((int*)b);
-}
