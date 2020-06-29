@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     struct timespec requestStart, requestEnd;
   double accum, cpy_accum;
   
-  // Collecting time for copy A into B and sorting B
+  
   clock_gettime(CLOCK_REALTIME, &requestStart);
   for (int i =0; i < NUM_OF_REPETITIONS;i++){
     dijkstra(G,1);  
