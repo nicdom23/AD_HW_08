@@ -31,14 +31,17 @@ void dijkstra(graph* G, int index_s){
     pqueue * Q = build_pqueue(G->V,leq_dist,G->size_N,sizeof(node));
     
     while(!is_empty(Q)){
+        
         int index_u = ext_min(Q);
+        /*
         for (int index_v = 0; index_v<G->size_N;index_v++){
             if (G->WMat[index_u][index_v] > 0){
-                relax(Q,G,index_u,index_v,G->WMat[index_u][index_v]);
+                //relax(Q,G,index_u,index_v,G->WMat[index_u][index_v]);
 
             }
         }
+        */
     }
 
-        
+    free_pqueue(Q);
 }

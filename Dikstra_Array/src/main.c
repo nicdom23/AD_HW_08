@@ -4,17 +4,17 @@
 #include "dijkstra.h"
 #include "utilities.h"
 
-#define MAX_NUM_OF_NODES (500)
+#define MAX_NUM_OF_NODES (5000)
 
 #define NUM_OF_REPETITIONS (15)
 
 
 int main(int argc, char *argv[])
 {
-  printf("\n HELLO WORLD \n");
+  printf("\n n  time \n");
 
-    for(size_t num_of_nodes = 5; num_of_nodes< MAX_NUM_OF_NODES;num_of_nodes = num_of_nodes*2){
-      printf("START");
+    for(size_t num_of_nodes = 5; num_of_nodes< MAX_NUM_OF_NODES;num_of_nodes = num_of_nodes+100){
+  
     
     node* V  = (node*)malloc(num_of_nodes*sizeof(node)); 
     
@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     int **WMat=allocate_random_matrix(num_of_nodes,num_of_nodes,seed);
     
     graph* G = build_graph(V,num_of_nodes,WMat);
-  /*
-
+  
+  
     struct timespec requestStart, requestEnd;
   double accum, cpy_accum;
   
@@ -39,10 +39,12 @@ int main(int argc, char *argv[])
           (requestEnd.tv_nsec - requestStart.tv_nsec) / 1E9;
 
     accum=accum/NUM_OF_REPETITIONS;
-
-    printf("\n n: %ld TIME OF EXECUTION: %f\n",num_of_nodes,accum);
-
-    */
+      
+    
+    
+    //printf("\n%4.ld   %f",num_of_nodes,accum);
+    
+    printf("  %f  ",accum);
   
     delete_graph(G);
     deallocate_matrix(WMat,num_of_nodes);

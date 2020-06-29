@@ -20,5 +20,6 @@ int is_empty(const pqueue* Q);
 //we return the index of A that points at the wanted node
 int ext_min(pqueue* Q);
 
+void free_pqueue(pqueue* Q);
 
 #endif// PQUEUE
