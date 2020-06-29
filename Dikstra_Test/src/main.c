@@ -28,14 +28,11 @@ int main(int argc, char *argv[])
     WMat[3][4]=1;
     WMat[4][5]= 3;
     WMat[1][5]= 15;
-
+    
     graph* G = build_graph(V,num_of_nodes,WMat);
 
-    printf("\nBEFORE EXECUTION\n");
-    for (int i = 0; i<num_of_nodes;i++)
-      printf(" %ld ",V[i].d);
   
-    dijkstra(G,1);  
+    dijkstra(G,0);  
   
     printf("\nAFTER EXECUTION\n");
     for (int i = 0; i<num_of_nodes;i++)
