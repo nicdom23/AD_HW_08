@@ -42,8 +42,8 @@ int main(int argc, char *argv[])
       
     
     
-    //printf("\n%4.ld   %f",num_of_nodes,accum);
-    printf("  %f ",accum);
+    printf("\n%4.ld   %f",num_of_nodes,accum);
+    
     
     delete_graph(G);
     deallocate_matrix(WMat,num_of_nodes);
