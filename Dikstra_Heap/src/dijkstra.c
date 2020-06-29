@@ -13,7 +13,7 @@ void update_distance(pqueue* Q,graph*G, int index_v, int new_distance){
     
     for(int index_d = 0; index_d <= G->size_N;index_d++){
         if  (G->WMat[index_v][index_d] > 0 &&  G->V[index_d].d>new_distance){}
-            G->V[index_d].d = new_distance;
+            //G->V[index_d].d = new_distance;
     }
 }
 void relax(pqueue* Q,graph*G, int index_u, int index_v, int weight){
